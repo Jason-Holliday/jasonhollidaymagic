@@ -151,15 +151,16 @@ button:hover {
 }
 
 @media (max-width: 600px) {
+
   .close-button {
     font-size: 1.5rem;
     padding: 0.4rem;
   }
 
   .modal-content {
-    padding: 1rem 0.8rem; 
-    max-width: 90%;
-    width: 95%;
+    padding: 1rem 0.8rem;
+    max-width: 100%;
+    width: 100%;
   }
 
   h1 {
@@ -177,7 +178,7 @@ button:hover {
   }
 
   label {
-    font-size: 1rem;
+    font-size: .75rem;
   }
 
   input,
@@ -198,10 +199,12 @@ button:hover {
 }
 
 @media (max-width: 375px) {
+
   .modal-content {
     padding: 0.8rem 0.6rem;
-    max-width: 95%;
-    width: 98%;
+    height: auto;
+    max-height: 80vh;
+    overflow-y: auto;
   }
 
   h1 {

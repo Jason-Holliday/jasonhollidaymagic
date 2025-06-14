@@ -84,8 +84,7 @@
   #about-content {
     grid-template-columns: 1fr 1fr;
     gap: 1.5rem;
-    padding: 0 2rem;
-    max-width: 95%;
+    max-width: 100%;
   }
 
   .about-text h1 {
@@ -113,8 +112,6 @@
 @media (max-width: 768px) {
   #about-content {
     grid-template-columns: 1fr;
-    gap: 1.5rem;
-    padding: 3rem 1.5rem;
   }
 
   .about-text {
@@ -156,17 +153,15 @@
 @media (max-width: 600px) {
   #about-content {
     grid-template-columns: 1fr;
-    padding: 1.5rem 1rem 2rem;
   }
 
   .about-text {
     text-align: left;
-    padding: 0 1rem 1.5rem;
+    padding: 0 1.5rem;
   }
 
   .about-text h1 {
     font-size: 1.75rem;
-    margin-bottom: 1rem;
   }
 
   .about-text p {

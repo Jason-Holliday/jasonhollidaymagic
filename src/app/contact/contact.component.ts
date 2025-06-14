@@ -33,13 +33,13 @@ export class ContactComponent {
 
     if (this.contactForm.valid) {
       this.isLoading = true;
+      this.router.navigate(['/thank-you-page']);
       this.http.post(`https://jasonhollidaymagic.up.railway.app/send-email`, this.contactForm.value)
         .subscribe({
           next: (response) => {
             this.successMessage = 'E-Mail erfolgreich gesendet!';
             this.errorMessage = '';
             this.contactForm.reset();
-            this.router.navigate(['/thank-you-page']);;
           },
           error: (error) => {
             this.errorMessage = 'Fehler beim Senden der E-Mail. Bitte versuche es später erneut.';
