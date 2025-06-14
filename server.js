@@ -66,10 +66,8 @@ const angularDistPath = path.join(__dirname, 'dist/jasonhollidaymagic/browser');
 
 app.use(express.static(angularDistPath));
 
-app.get(/(.*)/, (req, res, next) => {
+app.get('*', (req, res) => {
   res.sendFile(path.join(angularDistPath, 'index.html'));
-  console.log(req.path, req.params);
-  next();
 });
 
 app.listen(PORT, () => {
