@@ -1,0 +1,21 @@
+<section class="faq" id="faq">
+  <div class="container">
+    <h1>Häufig gestellte Fragen</h1>
+    @for (item of faqItems; track item) {
+    <div class="faq-item" (click)="toggle(item)" role="button" [attr.aria-expanded]="item.isOpen" tabindex="0"
+      (keydown)="onKeydown($event, item)">
+      <h2>
+        <i [ngClass]="item.isOpen ? 'fas fa-minus' : 'fas fa-plus'"></i>
+        {{ item.question }}
+      </h2>
+    </div>
+    @if (item.isOpen) {
+    <p>{{ item.answer }}</p>
+    }
+    }
+    <div class="btn-container">
+      <button class="cta-button" (click)="openModal()">Kostenlos anfragen</button>
+    </div>
+  </div>
+
+</section>

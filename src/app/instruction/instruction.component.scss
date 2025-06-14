@@ -1,0 +1,204 @@
+.instruction {
+  padding: 4rem 2rem;
+  background-color: var(--color-primary);
+  color: var(--color-text-dark);
+  min-height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.instruction-wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.step-headline h1 {
+    text-align: center;
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    color: var(--color-text-dark);
+}
+
+.step-headline p {
+    text-align: center;
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    color: var(--color-text-dark);
+}
+
+.step-by-step {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr auto 1fr;
+  gap: 1rem;
+  align-items: center;
+  text-align: center;
+}
+
+.step-by-step > div.step-one,
+.step-by-step > div.step-two,
+.step-by-step > div.step-three {
+  background-color: var(--color-muted);
+  padding: 1.5rem 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  flex: 1;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.step-by-step i{
+  font-size: 2.5rem;
+  margin-bottom: .5rem;
+}
+
+
+.step-by-step h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.8rem;
+  font-weight: 600;
+  color: var(--color-secondary);
+}
+
+.step-by-step p {
+  font-size: 1.1rem;
+  color: var(--color-text-dark);
+  flex-grow: 1;
+}
+
+.arrow {
+  font-size: 2rem;
+  color: var(--color-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
+
+.btn-container {
+  margin-top: 2.5rem;
+  text-align: center;
+}
+
+.btn-container .cta-button {
+  background-color: var(--color-accent);
+  color: var(--color-text-dark);
+  border: 3px solid var(--color-accent);
+  font-size: 1.25rem;
+  font-weight: 600;
+  padding: 1rem 2.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-container .cta-button:hover {
+  background-color: var(--color-primary);
+  color: var(--color-text-dark);
+  border: 3px solid var(--color-accent);
+  transform: scale(1.05);
+}
+
+@media (max-width: 1024px) {
+  .step-headline h1 {
+    font-size: 2rem;
+  }
+
+  .step-headline p {
+    font-size: 1.05rem;
+  }
+
+  .step-by-step {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .step-by-step > div {
+    width: 100%;
+    max-width: 500px;
+    padding: 1.5rem;
+  }
+
+  .arrow {
+    transform: rotate(90deg);
+    font-size: 2rem;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .step-headline h1 {
+    font-size: 1.8rem;
+  }
+
+  .step-headline p {
+    font-size: 1rem;
+  }
+
+  .step-by-step {
+    gap: 1.8rem;
+  }
+
+  .step-by-step > div {
+    padding: 1.25rem;
+    max-width: 90%;
+  }
+
+  .step-by-step h2 {
+    font-size: 1.2rem;
+  }
+
+  .step-by-step p {
+    font-size: 0.95rem;
+  }
+
+  .arrow {
+    font-size: 1.7rem;
+  }
+
+  .btn-container .cta-button {
+    font-size: 1rem;
+    padding: 0.8rem 2rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .step-headline h1 {
+    font-size: 1.5rem;
+  }
+
+  .step-headline p {
+    font-size: 0.9rem;
+  }
+
+  .step-by-step {
+    gap: 1.2rem;
+  }
+
+  .step-by-step > div {
+    padding: 1rem;
+    max-width: 95%;
+  }
+
+  .step-by-step h2 {
+    font-size: 1rem;
+  }
+
+  .step-by-step p {
+    font-size: 0.9rem;
+  }
+
+  .arrow {
+    font-size: 1.4rem;
+  }
+
+  .btn-container .cta-button {
+    font-size: 0.95rem;
+    padding: 0.7rem 1.6rem;
+  }
+}

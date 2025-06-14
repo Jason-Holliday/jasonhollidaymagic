@@ -1,0 +1,43 @@
+<header class="navbar" role="banner">
+  <div class="container" id="container-nav">
+    <a href="#hero" class="navbar-left" aria-label="Zur Startseite von Jason Holliday" (click)="setActive('#hero')">
+      <img src="/P-1kopie.png" class="navbar-logo" alt="Zur Startseite von Jason Holliday Zauberkünstler" />
+    </a>
+
+    <div class="navbar-right">
+      <button class="burger-menu" id="burger-toggle" aria-label="Menü öffnen" aria-controls="main-navigation"
+        [attr.aria-expanded]="menuOpen" (click)="toggleMenu()">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+
+    <nav class="navbar-center" id="main-navigation" aria-label="Hauptnavigation" [class.active]="menuOpen">
+      <a href="#hero" [class.active]="activeLink === '#hero'" (click)="setActive('#hero')">
+        Startseite
+      </a>
+      <a href="#reference" [class.active]="activeLink === '#reference'" (click)="setActive('#reference')">
+        Referenzen
+      </a>
+      <a href="#events" [class.active]="activeLink === '#events'" (click)="setActive('#events')">
+        Anlässe
+      </a>
+      <a href="#about-me" [class.active]="activeLink === '#about-me'" (click)="setActive('#about-me')">
+        Über mich
+      </a>
+      <a href="#faq" [class.active]="activeLink === '#faq'" (click)="setActive('#faq')">
+        FAQ
+      </a>
+      <a href="#contact" [class.active]="activeLink === '#contact'" (click)="setActive('#contact')">
+        Kontakt
+      </a>
+    </nav>
+
+
+    <button class="cta-button" id="open-modal" aria-haspopup="dialog" aria-controls="kontakt-modal"
+      aria-expanded="false" (click)="openModal()">
+      <i class="fas fa-envelope" aria-hidden="true" style="margin-right: 0.5rem;"></i>
+      Kostenlos anfragen
+    </button>
+
+  </div>
+</header>

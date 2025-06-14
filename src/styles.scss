@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+  /* 60% – Hauptfarbe: neutrales Weiß für helle Sections */
+  --color-primary: #E7EFFC;
+
+  /* 30% – Sekundärfarbe: dunkles Blau für dunkle Sections */
+  --color-secondary: #0B2545;
+
+  /* 10% – Akzentfarbe: kräftiges Blau für Buttons/Highlights */
+  --color-accent: #E56534;
+  --color-hover: #692E17;
+
+  /* Textfarben je nach Hintergrund */
+  --color-text-dark: #111111; /* für helle Hintergründe */
+  --color-text-light: #ffffff; /* für dunkle Hintergründe */
+
+  /* Hintergrundfarben für Layout */
+  --color-background-light: #ffffff;
+  --color-background-dark: #0B2545;
+
+  /* Für dezente Texte oder Labels */
+  --color-muted: #8DA9C4;
+  --color-muted-hover: #6B87A6;
+  
+  /* Fehlernachricht anzeigen */
+  --color-error-message: #FF8F8F;
+}
+
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+
+    width: 100%;
+}
+
+
+section {
+    padding-top: 6rem;
+}
+  
