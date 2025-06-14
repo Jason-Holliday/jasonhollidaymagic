@@ -201,10 +201,10 @@ button:hover {
 @media (max-width: 375px) {
 
   .modal-content {
-    padding: 0.8rem 0.6rem;
-    height: auto;
     max-height: 80vh;
     overflow-y: auto;
+    width: 100%;
+    max-width: 340px;
   }
 
   h1 {
@@ -215,8 +215,8 @@ button:hover {
 
   input,
   textarea {
-    padding: 0.4rem;
-    font-size: 0.85rem;
+    padding: 0.2rem;
+    font-size: 0.75rem;
   }
 
   textarea {
