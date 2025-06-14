@@ -62,7 +62,9 @@ app.post('/.netlify/functions/sendmail', async (req, res) => {
   }
 });
 
-app.use(express.static(path.join(__dirname, 'dist/jasonhollidaymagic')));
+const angularDistPath = path.join(__dirname, 'dist/jasonhollidaymagic');
+
+app.use(express.static(angularDistPath));
 
 app.get('*', (req, res) => {
   res.sendFile(path.join(angularDistPath, 'index.html'));
