@@ -1,14 +1,9 @@
 import { Injectable } from '@angular/core';
+import { VideoTestimonial } from './video-testimonial.model';
 
 @Injectable({
   providedIn: 'root'
 })
-
-
-export interface VideoTestimonial {
-  video: string;
-  thumbnail: string;
-}
 
 
 export class VideoTestimonialsService {

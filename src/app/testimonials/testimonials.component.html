@@ -1,7 +1,9 @@
 <div class="videoTestimonial-wrapper">
   @for(videoTestimonial of videoTestimonials; track videoTestimonial){
   <div class="video-testimonial">
-    <video [src]="videoTestimonial.video" [attr.poster]="videoTestimonial.thumbnail"  preload="none" controls></video>
+    <video [src]="'assets/videos/' + videoTestimonial.video"
+      [attr.poster]="'assets/thumbnails/' + videoTestimonial.thumbnail" preload="none" controls>
+    </video>
   </div>
   }
 </div>
