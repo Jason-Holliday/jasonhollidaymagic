@@ -1,14 +1,13 @@
 .modal {
   position: fixed;
-  top: 0;
-  left: 0;
+  inset: 0;
   z-index: 9999;
-  width: 100vw;
-  height: 100vh;
   background-color: rgba(0, 0, 0, 0.9);
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 1rem; 
+  overflow-y: auto; 
 }
 
 .modal-content {
@@ -20,6 +19,8 @@
   width: 90%;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
   position: relative;
+  max-height: 90vh;
+  overflow-y: auto;
 }
 
 .close-button {
