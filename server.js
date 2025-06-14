@@ -37,7 +37,7 @@ if (process.env.NODE_ENV !== 'production') {
   });
 }
 
-app.post('/sendmail', async (req, res) => {
+app.post('/send-mail', async (req, res) => {
   const { firstName, lastName, email, message } = req.body;
   const name = `${firstName ?? ''} ${lastName ?? ''}`.trim();
 
