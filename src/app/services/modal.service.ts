@@ -9,21 +9,18 @@ export class ModalService {
 
   private previousTitle: string | null = null;
 
-  constructor(private titleService: Title) { }
+  constructor(private titleService: Title) {}
 
   open(title?: string) {
     this.previousTitle = this.titleService.getTitle();
     if (title) {
       this.titleService.setTitle(`jasonhollidaymagic | ${title}`);
     }
-    document.body.classList.add('modal-open');
-
     this.showModalSubject.next(true);
   }
 
   close() {
     this.showModalSubject.next(false);
-    document.body.classList.remove('modal-open');
     if (this.previousTitle) {
       this.titleService.setTitle(this.previousTitle);
     }
