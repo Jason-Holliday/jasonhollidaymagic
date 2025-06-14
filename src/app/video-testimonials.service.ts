@@ -10,10 +10,10 @@ export class VideoTestimonialsService {
 
   getVideoTestimonials() {
     return [
-      { video: '/assets/videos/IMG_0608.MP4', poster: '/assets/thumbnails/IMG_0608.jpg' },
-      { video: '/assets/videos/IMG_0609.MP4', poster: '/assets/thumbnails/IMG_0609.jpg' },
-      { video: '/assets/videos/IMG_0611.MP4', poster: '/assets/thumbnails/IMG_0611.jpg' },
-      { video: '/assets/videos/IMG_0612.MP4', poster: '/assets/thumbnails/IMG_0612.jpg' }
+      { video: 'IMG_0608.MP4', poster: 'IMG_0608.jpg' },
+      { video: 'IMG_0609.MP4', poster: 'IMG_0609.jpg' },
+      { video: 'IMG_0611.MP4', poster: 'IMG_0611.jpg' },
+      { video: 'IMG_0612.MP4', poster: 'IMG_0612.jpg' }
     ];
   }
 
