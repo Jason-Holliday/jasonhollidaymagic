@@ -1,11 +1,7 @@
 <div class="videoTestimonial-wrapper">
   @for(videoTestimonial of videoTestimonials; track videoTestimonial){
   <div class="video-testimonial">
-    <video controls preload="none" [attr.poster]="'assets/thumbnails/' + videoTestimonial.thumbnail">
-      <source [src]="'assets/videos/' + videoTestimonial.video" type="video/mp4">
-      Dein Browser unterstützt das Video-Tag nicht.
-    </video>
-
+    <video [src]="videoTestimonial.video" [attr.poster]="videoTestimonial.thumbnail"  preload="none" controls></video>
   </div>
   }
 </div>
