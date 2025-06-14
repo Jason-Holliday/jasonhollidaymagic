@@ -39,7 +39,6 @@ export class ContactPopupComponent {
 
     if (this.contactForm.valid) {
       this.isLoading = true;
-      this.contactForm.reset();
       this.modalService.close();
       this.router.navigate(['/thank-you-page']);
       this.http.post(`https://jasonhollidaymagic.up.railway.app/send-email`, this.contactForm.value)
@@ -47,7 +46,7 @@ export class ContactPopupComponent {
           next: (response) => {
             this.successMessage = 'E-Mail erfolgreich gesendet!';
             this.errorMessage = '';
-             
+            this.contactForm.reset();
           },
           error: (error) => {
             this.errorMessage = 'Fehler beim Senden der E-Mail. Bitte versuche es später erneut.';
