@@ -33,7 +33,7 @@ export class ContactComponent {
 
     if (this.contactForm.valid) {
       this.isLoading = true;
-      this.http.post(`https://jasonhollidaymagic.netlify.app/send-email`, this.contactForm.value)
+      this.http.post(`https://jasonhollidaymagic.up.railway.app/send-email`, this.contactForm.value)
         .subscribe({
           next: (response) => {
             this.successMessage = 'E-Mail erfolgreich gesendet!';

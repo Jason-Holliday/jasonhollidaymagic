@@ -8,7 +8,7 @@ const app = express();
 
 // CORS Middleware
 app.use(cors({
-  origin: ['https://jasonhollidaymagic.netlify.app'], 
+  origin: ['https://jasonhollidaymagic.up.railway.app'], 
   methods: ['GET', 'POST'],
 }));
 
@@ -37,7 +37,7 @@ if (process.env.NODE_ENV !== 'production') {
   });
 }
 
-app.post('/.netlify/functions/sendmail', async (req, res) => {
+app.post('/sendmail', async (req, res) => {
   const { firstName, lastName, email, message } = req.body;
   const name = `${firstName ?? ''} ${lastName ?? ''}`.trim();
 
