@@ -62,7 +62,7 @@ app.post('/sendmail', async (req, res) => {
   }
 });
 
-const angularDistPath = path.join(__dirname, 'dist/jasonhollidaymagic');
+const angularDistPath = path.join(__dirname, 'dist/jasonhollidaymagic/browser');
 
 app.use(express.static(angularDistPath));
 
