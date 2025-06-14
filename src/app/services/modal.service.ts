@@ -16,6 +16,7 @@ export class ModalService {
     if (title) {
       this.titleService.setTitle(`jasonhollidaymagic | ${title}`);
     }
+    document.body.classList.add('modal-open');
     this.showModalSubject.next(true);
   }
 
@@ -24,5 +25,6 @@ export class ModalService {
     if (this.previousTitle) {
       this.titleService.setTitle(this.previousTitle);
     }
+    document.body.classList.remove('modal-open');
   }
 }
