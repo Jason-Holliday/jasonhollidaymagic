@@ -8,7 +8,7 @@ const app = express();
 
 // CORS Middleware
 app.use(cors({
-  origin: ['https://jasonhollidaymagic.up.railway.app'], 
+  origin: ['https://jasonhollidaymagic.netlify.app'], 
   methods: ['GET', 'POST'],
 }));
 
