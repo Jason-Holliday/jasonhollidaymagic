@@ -11,7 +11,6 @@ interface Testimonial {
 interface VideoTestimonial {
   video: string;
   author?: string;
-  poster?: string;
 }
 
 @Component({
