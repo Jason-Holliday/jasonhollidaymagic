@@ -5,10 +5,13 @@ import { VideoTestimonialsService } from '../video-testimonials.service';
 interface Testimonial {
   text: string;
   author: string;
+  image: string;
 }
 
 interface VideoTestimonial {
   video: string;
+  author?: string;
+  poster?: string;
 }
 
 @Component({
@@ -23,11 +26,11 @@ export class TestimonialsComponent implements OnInit {
 
   constructor(
     private testimonialsService: TestimonialsService,
-    private videoTestimonialsService: VideoTestimonialsService
+    private videoTestimonialsService: VideoTestimonialsService 
   ) {}
 
   ngOnInit(): void {
     this.testimonials = this.testimonialsService.getTestimonials();
-    this.videoTestimonials = this.videoTestimonialsService.getVideoTestimonials();
+    this.videoTestimonials = this.videoTestimonialsService.getVideoTestimonials(); 
   }
 }
