@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TestimonialsService } from '../testimonials.service';
 import { VideoTestimonialsService } from '../video-testimonials.service';
-import { VideoTestimonial } from '../video-testimonial.model';
+
 
 interface Testimonial {
   text: string;
@@ -29,8 +29,7 @@ export class TestimonialsComponent implements OnInit {
 
     // Thumbnail als poster setzen
     this.videoTestimonials = this.videoTestimonialsService.getVideoTestimonials().map(video => ({
-      video: video.video,
-      thumbnail: video.thumbnail
+      video: video.video
     }));
   }
 }
