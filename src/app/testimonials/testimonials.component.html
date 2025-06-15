@@ -1,8 +1,13 @@
 <div class="videoTestimonial-wrapper">
   @for(videoTestimonial of videoTestimonials; track videoTestimonial){
-  <div class="video-testimonial">
-    <video [src]="videoTestimonial.video" controls playsinline></video>
-  </div>
+    <div class="video-testimonial">
+      <video
+        [src]="videoTestimonial.video"
+        [poster]="videoTestimonial.poster"
+        controls
+        playsinline
+      ></video>
+    </div>
   }
 </div>
 
