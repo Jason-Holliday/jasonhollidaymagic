@@ -16,7 +16,6 @@ interface Testimonial {
 })
 export class TestimonialsComponent implements OnInit {
   testimonials: Testimonial[] = [];
-  videoTestimonials: VideoTestimonial[] = [];
   stars = [1, 2, 3, 4, 5];
 
   constructor(
