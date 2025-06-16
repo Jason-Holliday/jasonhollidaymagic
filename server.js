@@ -1,5 +1,6 @@
 require('dotenv').config();
 const express = require('express');
+const cloudinary = require('cloudinary').v2;
 const cors = require('cors'); 
 const nodemailer = require('nodemailer');
 const path = require('path');
@@ -42,6 +43,14 @@ if (process.env.NODE_ENV !== 'production') {
     }
   });
 }
+
+// Cloudinary konfigurieren
+cloudinary.config({
+  cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+  api_key: process.env.CLOUDINARY_API_KEY,
+  api_secret: process.env.CLOUDINARY_API_SECRET
+});
+
 
 app.post('/send-email', async (req, res) => {
   const { firstName, lastName, email, message } = req.body;

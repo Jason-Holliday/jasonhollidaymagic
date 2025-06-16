@@ -1,11 +1,12 @@
 <div class="videoTestimonial-wrapper">
-  @for(videoTestimonial of videoTestimonials; track videoTestimonial){
+  @for (videoTestimonial of videoTestimonials; track videoTestimonial) {
     <div class="video-testimonial">
       <video
         [src]="videoTestimonial.video"
-        [poster]="videoTestimonial.poster"
         controls
-        playsinline
+        preload="none"
+        width="640"
+        height="360"
       ></video>
     </div>
   }
