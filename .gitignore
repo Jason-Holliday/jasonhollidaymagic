@@ -1,4 +1,3 @@
-
 # Temporary files
 /tmp
 /out-tsc
@@ -51,6 +50,3 @@ Thumbs.db
 frontend/.env
 backend/.env
 .env
-
-# Local Netlify folder
-.netlify
