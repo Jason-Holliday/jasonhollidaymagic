@@ -1,0 +1,102 @@
+<section class="contact" id="contact" aria-labelledby="contact-heading">
+    <div class="container">
+        <h1>Kontaktformular</h1>
+        <div class="contact-form">
+
+            <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" novalidate>
+                <div class="form-group">
+                    <p>
+                        Die mit einem Stern (*) gekennzeichneten Felder sind Pflichtfelder.
+                    </p>
+                </div>
+                <div class="form-group">
+                    <label for="firstName">Vorname:*</label>
+                    <input 
+                        id="firstName" 
+                        formControlName="firstName" 
+                        placeholder="Dein Vorname..." 
+                        required 
+                        aria-required="true"
+                        [attr.aria-invalid]="contactForm.get('firstName')?.invalid && contactForm.get('firstName')?.touched"
+                        aria-describedby="firstName-error"
+                        >
+                    @if (contactForm.get('firstName')?.invalid && contactForm.get('firstName')?.touched) {
+                        <div id="firstName-error" class="error-message" role="alert">
+                        Bitte gib deinen Vornamen ein.
+                        </div>
+                    }
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Nachname:*</label> 
+                    <input 
+                        id="lastName" 
+                        formControlName="lastName" 
+                        placeholder="Dein Nachname..." 
+                        required 
+                        aria-required="true"
+                        [attr.aria-invalid]="contactForm.get('lastName')?.invalid && contactForm.get('lastName')?.touched"
+                        aria-describedby="lastName-error"                        
+                        >
+                    @if (contactForm.get('lastName')?.invalid && contactForm.get('lastName')?.touched) {
+                        <div id="lastName-error" class="error-message" role="alert">
+                            Bitte gib deinen Nachnamen ein.
+                        </div>
+                    }
+                </div>
+                <div class="form-group">
+                    <label for="phone">Telefonnummer:*</label>
+                    <input 
+                        id="phone" 
+                        formControlName="phone" 
+                        placeholder="Deine Nummer: z.B. 0176 1234 567"
+                        required
+                        aria-required="true"
+                        [attr.aria-invalid]="contactForm.get('phone')?.invalid && contactForm.get('phone')?.touched"
+                        aria-describedby="phone-error"
+                        >
+                    @if (contactForm.get('phone')?.invalid && contactForm.get('phone')?.touched) {
+                        <div id="phone-error" class="error-message" role="alert">
+                            Bitte gib deine Telefonnummer ein.
+                        </div>
+                    }
+                </div>
+                <div class="form-group">
+                    <label for="email">E-Mail:*</label>
+                    <input 
+                        type="email" 
+                        formControlName="email" 
+                        placeholder="Deine E-Mail Adresse..." 
+                        required 
+                        aria-required="true"
+                        [attr.aria-invalid]="contactForm.get('email')?.invalid && contactForm.get('email')?.touched"
+                        aria-describedby="email-error"
+                        >
+                    @if (contactForm.get('email')?.invalid && contactForm.get('email')?.touched) {
+                        <div id="email-error" class="error-message" role="alert">
+                            Bitte gib deine E-Mail Adresse ein.
+                        </div>
+                    }
+                </div>
+                <div class="form-group">
+                    <label for="message">Deine Nachricht:*</label>
+                    <textarea 
+                        name="message" 
+                        id="message" 
+                        formControlName="message" 
+                        placeholder="Deine Nachricht..." 
+                        required 
+                        aria-required="true"
+                        [attr.aria-invalid]="contactForm.get('message')?.invalid && contactForm.get('message')?.touched"
+                        aria-describedby="message-error"
+                        ></textarea>
+                    @if (contactForm.get('message')?.invalid && contactForm.get('message')?.touched) {
+                    <div id="message-error" class="error-message" role="alert">
+                        Bitte gib deine Nachricht ein.
+                    </div>
+                    }
+                </div>
+                <button type="submit">Absenden</button>
+            </form>
+        </div>
+    </div>
+</section>

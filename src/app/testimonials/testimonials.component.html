@@ -1,0 +1,31 @@
+<div class="videoTestimonial-wrapper">
+  @for (videoTestimonial of videoTestimonials; track videoTestimonial.video) {
+  <div class="video-testimonial">
+    <video #videoRef controls [poster]="videoTestimonial.poster" preload="metadata">
+      <source [attr.src]="videoTestimonial.video" type="video/mp4" />
+      Dein Browser unterstützt das Video-Tag nicht.
+    </video>
+
+  </div>
+  }
+</div>
+
+
+<div class="testimonial-wrapper">
+  @for(testimonial of testimonials; track testimonial) {
+  <div class="testimonial">
+    <div class="testimonial-info">
+      @if(testimonial.image) {
+      <img src="{{testimonial.image}}" alt="">
+      }
+      <h2>{{testimonial.author}}</h2>
+      <div class="stars">
+        @for (star of stars; track star) {
+        <i class="fas fa-star"></i>
+        }
+      </div>
+    </div>
+    <p>{{testimonial.text}}</p>
+  </div>
+  }
+</div>

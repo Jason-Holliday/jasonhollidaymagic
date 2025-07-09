@@ -1,0 +1,149 @@
+.reference {
+  background-color: var(--color-secondary);
+}
+
+.reference-text {
+  color: var(--color-text-light);
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.reference h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.reference-text p {
+  font-size: 1.25rem;
+  max-width: 700px;
+  line-height: 1.6;
+  margin: 0 auto;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.cta-button {
+  margin-top: 1.5rem;
+  display: inline-block;
+  background-color: var(--color-accent);
+  color: var(--color-text-dark);
+  border: 3px solid var(--color-accent);
+  font-size: 1.25rem;
+  font-weight: 600;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-bottom: 3rem;
+}
+
+.cta-button:hover {
+  background-color: var(--color-secondary);
+  color: var(--color-text-light);
+  border: 3px solid var(--color-accent);
+  transform: scale(1.05);
+}
+
+/* 1. Sehr kleine Smartphones: 320–375px */
+@media (min-width: 320px) and (max-width: 375px) {
+  .reference h1 {
+    font-size: 1.5rem;
+  }
+
+  .reference-text p {
+    font-size: 0.9rem;
+    padding: 0 1rem;
+  }
+
+  .cta-button {
+    font-size: 0.9rem;
+    padding: 0.6rem 1.2rem;
+  }
+}
+
+/* 2. Kleine Smartphones: 376–424px */
+@media (min-width: 376px) and (max-width: 424px) {
+  .reference h1 {
+    font-size: 1.75rem;
+  }
+
+  .reference-text p {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+
+  .cta-button {
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+  }
+}
+
+/* 3. Große Smartphones & kleine Tablets: 425–767px */
+@media (min-width: 425px) and (max-width: 767px) {
+  .reference h1 {
+    font-size: 2rem;
+  }
+
+  .reference-text p {
+    font-size: 1.1rem;
+    padding: 0 1.5rem;
+  }
+
+  .cta-button {
+    font-size: 1.1rem;
+    padding: 0.9rem 1.8rem;
+  }
+}
+
+/* 4. Tablets: 768–1023px */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .reference h1 {
+    font-size: 2.5rem;
+  }
+
+  .reference-text p {
+    font-size: 1.2rem;
+  }
+
+  .cta-button {
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+  }
+}
+
+/* 5. Kleiner Desktop: 1024–1199px */
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .reference h1 {
+    font-size: 2.75rem;
+  }
+
+  .reference-text p {
+    font-size: 1.25rem;
+  }
+
+  .cta-button {
+    font-size: 1.25rem;
+    padding: 1rem 2.25rem;
+  }
+}
+
+/* 6. Großer Desktop: ab 1200px */
+@media (min-width: 1200px) {
+  .reference h1 {
+    font-size: 3rem;
+  }
+
+  .reference-text p {
+    font-size: 1.25rem;
+  }
+
+  .cta-button {
+    font-size: 1.25rem;
+    padding: 1rem 2rem;
+  }
+}
