@@ -1,7 +1,12 @@
 <div class="videoTestimonial-wrapper">
   @for (videoTestimonial of videoTestimonials; track videoTestimonial.video) {
   <div class="video-testimonial">
-    <video #videoRef controls [poster]="videoTestimonial.poster" preload="metadata">
+    <video 
+      #videoRef controls 
+      [poster]="videoTestimonial.poster" 
+      preload="metadata"
+      (intersectionObserver)="loadVideo(videoRef, videoTestimonial.video)"
+      >
       <source [attr.src]="videoTestimonial.video" type="video/mp4" />
       Dein Browser unterstützt das Video-Tag nicht.
     </video>
@@ -16,7 +21,7 @@
   <div class="testimonial">
     <div class="testimonial-info">
       @if(testimonial.image) {
-      <img src="{{testimonial.image}}" alt="">
+      <img src="{{testimonial.image}}" alt="" loading="lazy">
       }
       <h2>{{testimonial.author}}</h2>
       <div class="stars">

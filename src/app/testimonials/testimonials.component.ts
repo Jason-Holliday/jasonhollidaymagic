@@ -32,4 +32,10 @@ export class TestimonialsComponent implements OnInit {
     this.testimonials = this.testimonialsService.getTestimonials();
     this.videoTestimonials = this.videoTestimonialsService.getVideoTestimonials(); 
   }
+
+  loadVideo(videoElement: HTMLVideoElement, src: string){
+    if(!videoElement.src){
+      videoElement.src = src;
+    }
+  }
 }
